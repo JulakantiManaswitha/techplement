@@ -1,0 +1,28 @@
+curl --location --request GET 'http://localhost:8080/user/1235' \
+--header 'Content-Type: application/json'
+curl --location --request POST 'http://localhost:8080/user' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "userId": "1235",
+    "emailId": "manaswitha@gmail.com",
+    "name": "Manaswitha",
+    "dateOfBirth": "08/07/2020",
+    "password": "Manaswitha@123"
+}'
+curl --location --request GET 'http://localhost:8080/user/1235' \
+--header 'Content-Type: application/json'
+curl --location --request PUT 'http://localhost:8080/user' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "userId": "1235",
+    "emailId": "manaswitha@gmail.com",
+    "name": "Manaswitha",
+    "dateOfBirth": "08/07/2020",
+    "password": "Manaswitha@124"
+}'
+curl --location --request GET 'http://localhost:8080/user/1235' \
+--header 'Content-Type: application/json'
+curl --location --request DELETE 'http://localhost:8080/user/1235' \
+--header 'Content-Type: application/json'
+curl --location --request GET 'http://localhost:8080/user/1235' \
+--header 'Content-Type: application/json'
