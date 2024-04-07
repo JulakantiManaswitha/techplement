@@ -29,7 +29,9 @@ public class UserService {
     // TODO: Complete this
     private boolean isUserValid(User user) {
         String email = user.getEmailId();
-        // valid email - @
+        if(!email.contains("@")){
+            return false;
+        }
         String dateOfBirth = user.getDateOfBirth();
         // valid dob - dd/mm/yyyy
         return true;
