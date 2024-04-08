@@ -34,7 +34,11 @@ public class UserService {
         }
         String dateOfBirth = user.getDateOfBirth();
         // valid dob - dd/mm/yyyy
-        return true;
+        String dateFormatRegex = "^([0-9]{2})-([0-9]{2})-([0-9]{4})$";
+        if(dateOfBirth.matches(dateFormatRegex))  {
+            return true;
+        }
+        return false;
     }
 
     public Response replace(User user) {
